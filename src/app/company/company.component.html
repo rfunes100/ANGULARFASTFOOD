@@ -1,0 +1,46 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Listado de compañias</h4>
+                      
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                        <dx-data-grid id="gridContainer" 
+                        [showBorders]="true" [allowColumnReordering]="true" columnAutoWidth="true"
+                        [dataSource]="solicitudes.ListadoSolicitudes"  >
+                  
+                        <dxo-paging [pageSize]="15"></dxo-paging>
+                        <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[5, 10, 20]"></dxo-pager>
+                        
+                  
+                        <dxo-search-panel [visible]="true"></dxo-search-panel>
+                        <dxi-column  dataField="companyName"  caption="Disponibilidad" width="100"></dxi-column>
+                   <!--     <dxi-column   caption="Planta" width="100"></dxi-column>
+                        <dxi-column   caption="Unidad" width="100"></dxi-column>
+                        <dxi-column   caption="Celda" width="100"></dxi-column>
+                        <dxi-column   caption="Empleado" width="100"></dxi-column>
+                        <dxi-column   caption="Semana" width="100"></dxi-column>
+                        <dxi-column   caption="Balanceoid" width="100"></dxi-column>
+                        <dxi-column   caption="Tipo" width="100"></dxi-column>
+                        <dxo-export [enabled]="true"  ></dxo-export>
+                  -->
+                      </dx-data-grid>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+   
+  
