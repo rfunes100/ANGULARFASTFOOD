@@ -26,4 +26,9 @@ export class CategoriaService {
        return this.http.get(`${Connection.API_ENDPOINT}/${baseUrl}/${id}` ) ;
       console.log('Metodo get a la base de datos',Connection.API_ENDPOINT +baseUrl);
       }
+
+      post(baseUrl: string , objeto: any )
+      {
+         return this.http.post(`${Connection.API_ENDPOINT}/${baseUrl}` ,  objeto) ; 
+      }
 }

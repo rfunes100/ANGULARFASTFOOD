@@ -1,6 +1,7 @@
 import { CommonService } from './../Servicios/common.service';
 import { Component, OnInit } from '@angular/core';
 import { Company } from '../class/Company'
+import { CategoriaService } from 'app/services/categoria.service';
 
 
 @Component({
@@ -17,15 +18,30 @@ export class CompanyComponent implements OnInit {
   };
 
 
-   constructor( private commonservices: CommonService) { }
+   constructor( private commonservices: CategoriaService) { }
+   p: number = 1;
+
+
+    cargapedido()
+    {
+      this.commonservices.getAll('/DetPedidoes').subscribe((data) => {
+        // this.commonservices.getAll('gps-brands').subscribe((data) => {
+           console.log('result ', data) ;
+           this.solicitudes.ListadoSolicitudes = data ;
+         })
+
+    } 
 
   ngOnInit() {
 
-
+/*
     this.commonservices.getAlld().subscribe((data) => {
       console.log('result ', data) ;
       this.solicitudes.ListadoSolicitudes = data ;
     })
+    */
+
+    
 
   //  this.commonservices.getAlld().subscribe(Companies => this.Companies = Companies
     //  console.log('result ' ) ;

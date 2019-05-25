@@ -1,3 +1,5 @@
+
+
 <div class="main-content"   >
   <div class="container-fluid">
       <div class="row">
@@ -11,18 +13,21 @@
                             <div class="card-icon">
                                 <i class="material-icons">content_copy</i>
                             </div>
-                            <p class="card-category"> {{ employee.Nombre}} </p>
+                            <p class="card-category">  {{ employee.Nombre}}  </p>
                             <h3 class="card-title">
                                 <small>
-                                  <button mat-raised-button type="submit" class=" btn-info pull-left"    >Ver</button>
-                           
+                                    <button mat-raised-button type="submit" class=" btn-info pull-left"  (click)="Agregar(employee.IDProducto)" >Agregar</button> 
                                 </small>
-                            </h3>
+                             </h3>
                         </div>
                         <div class="card-footer">
+                              
                             <div class="stats">
-                              <!--  <i class="material-icons text-danger">warning</i> -->
-                               {{employee.Descripcion}}
+                                    
+                                 cantidad:   <input type="number" value="500" min="0" max="1000" step="1" [(ngModel)]="encaadd.Cantidad"/> 
+                               
+                              <!--  <i class="material-icons text-danger">warning</i> 
+                                {{employee.Descripcion}} -->
                             </div>
                         </div>
                     </div>

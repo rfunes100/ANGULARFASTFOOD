@@ -69,5 +69,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'company',        component: CompanyComponent },
     { path: 'categoria',        component: CategoriasShowComponent },
+    { path: 'categoria/:id',        component: CategoriasShowComponent },
     { path: 'producto/:id',        component: ProductosShowComponent },
 ];
